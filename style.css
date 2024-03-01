@@ -74,7 +74,37 @@ h2{
     color: white;
 }
 /* Estilos para dispositivos móveis */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 720px) {
+    body {
+        padding: 20px; /* Reduz o padding do body */
+    }
+
+    .card {
+        width: 150px; /* Reduz a largura dos cards */
+        height: 150px; /* Reduz a altura dos cards */
+        margin: 10px; /* Reduz a margem dos cards */
+    }
+
+    img {
+        width: 150px; /* Reduz o tamanho das imagens */
+        height: 150px; /* Reduz o tamanho das imagens */
+    }
+
+    .info {
+        width: 300px; /* Reduz a largura da caixa de informações */
+        padding: 10px; /* Reduz o padding da caixa de informações */
+    }
+
+    p {
+        font-size: 14pt; /* Reduz o tamanho da fonte dos parágrafos */
+    }
+
+    h2 {
+        font-size: 16pt; /* Reduz o tamanho da fonte dos títulos */
+    }
+}
+
+@media only screen and (max-width: 1480px) and (max-height: 720px) {
     body {
         padding: 20px; /* Reduz o padding do body */
     }
