@@ -113,14 +113,19 @@ const criar = (id, imagem) => {
     });
 };
 
+
 const resetarJogo = () => {
     // Resetar todas as variáveis e imagens
     cartasAbertas = [];
     cartasBloqueadas = [];
     tentativas = 0;
     caixa.innerHTML = '';
+    
+    // Embaralhar os membros novamente
+    shuffledMembers.sort(() => Math.random() - 0.5);
     shuffledMembers.forEach((member) => criar(member.id, member.imagem));
 };
+
 
 // Criar as cartas para cada imagem embaralhada
 shuffledMembers.forEach((member) => criar(member.id, member.imagem));
