@@ -82,20 +82,29 @@ h2{
         padding: 20px; /* Reduz o padding do body */
     }
 
+    #caixa {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: flex-start; /* Alinha ao topo */
+        height: auto; /* Altura automática */
+        margin-bottom: 50px;
+    }
+
     .card {
-        width: 150px; /* Reduz a largura dos cards */
-        height: 150px; /* Reduz a altura dos cards */
-        margin: 10px; /* Reduz a margem dos cards */
+        flex: 0 0 calc(25% - 20px); /* 25% de largura com margem de 20px */
+        height: auto; /* Altura automática */
+        margin: 10px; /* Espaçamento entre as cartas */
     }
 
     img {
-        width: 150px; /* Reduz o tamanho das imagens */
-        height: 150px; /* Reduz o tamanho das imagens */
+        width: 100%; /* Preenche a largura do pai */
+        height: auto; /* Altura automática */
     }
 
     .info {
-        width: 300px; /* Reduz a largura da caixa de informações */
-        padding: 10px; /* Reduz o padding da caixa de informações */
+        width: 100%; /* Largura total */
+        padding: 10px; /* Espaçamento interno */
     }
 
     p {
@@ -106,7 +115,3 @@ h2{
         font-size: 16pt; /* Reduz o tamanho da fonte dos títulos */
     }
 }
-
-
-}
-
