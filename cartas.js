@@ -59,6 +59,7 @@ const shuffledMembers = doubledMembers.sort(() => Math.random() - 0.5);
 
 let cartasAbertas = [];
 let cartasBloqueadas = [];
+let tentativas = 0;
 
 const criar = (id, imagem) => {
     const card = document.createElement('div');
@@ -99,6 +100,11 @@ const criar = (id, imagem) => {
                 setTimeout(() => {
                     carta1.element.setAttribute('src', 'nophotointerroga.jpg');
                     carta2.element.setAttribute('src', 'nophotointerroga.jpg');
+                    tentativas++;
+                    if (tentativas === 5) {
+                        alert('Você perdeu! Tente novamente.');
+                        resetarJogo();
+                    }
                 }, 1000); // 1 segundo
             }
 
@@ -111,6 +117,7 @@ const resetarJogo = () => {
     // Resetar todas as variáveis e imagens
     cartasAbertas = [];
     cartasBloqueadas = [];
+    tentativas = 0;
     caixa.innerHTML = '';
     shuffledMembers.forEach((member) => criar(member.id, member.imagem));
 };
