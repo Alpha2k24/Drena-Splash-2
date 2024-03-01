@@ -32,10 +32,10 @@ const members = [
         imagem:'IMG-20240301-WA0072.jpg',
         controlImg: false
     },{
-        nome:'',
-        descricao:'',
-        idade:'',
-        imagem:'',
+        nome:'Gaspar',
+        descricao:'Yoga',
+        idade:'18',
+        imagem:'IMG-20240301-WA0074.jpg',
         controlImg: false
     },{
         nome:'',
