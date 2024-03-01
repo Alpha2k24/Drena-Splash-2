@@ -38,16 +38,16 @@ const members = [
         imagem:'IMG-20240301-WA0074.jpg',
         controlImg: false
     },{
-        nome:'',
-        descricao:'',
-        idade:'',
-        imagem:'',
-        controlImg: false
+        nome: 'Joel',
+        descricao: 'Virgem',
+        idade: '18',
+        imagem: 'IMG-20240301-WA0085.jpg',
+        controlImg: false,
     },{
-        nome:'',
-        descricao:'',
-        idade:'',
-        imagem:'',
+        nome:'Ediandra',
+        descricao:'Blogueirinha',
+        idade:'17',
+        imagem:'IMG-20231126-WA0082.jpg',
         controlImg: false
     },{
         nome:'',
