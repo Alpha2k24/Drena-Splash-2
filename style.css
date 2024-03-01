@@ -95,11 +95,15 @@ h2{
         flex: 0 0 calc(25% - 20px); /* 25% de largura com margem de 20px */
         height: auto; /* Altura automática */
         margin: 10px; /* Espaçamento entre as cartas */
+        display: flex;
+        align-items: center; /* Alinha conteúdo ao centro verticalmente */
+        justify-content: center; /* Alinha conteúdo ao centro horizontalmente */
     }
 
     img {
-        width: 100%; /* Preenche a largura do pai */
-        height: auto; /* Altura automática */
+        max-width: 100%; /* Largura máxima de 100% */
+        max-height: 100%; /* Altura máxima de 100% */
+        object-fit: cover; /* Ajusta a imagem para preencher o espaço */
     }
 
     .info {
