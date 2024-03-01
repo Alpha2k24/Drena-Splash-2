@@ -13,9 +13,12 @@ body {
     font-family: cursive;
     font-size: 12pt;
     background: linear-gradient(23deg, blue, red);
-    padding: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
-
+a{
+    color: goldenrod;
+}
 #caixa {
     display: flex;
     flex-wrap: wrap;
@@ -27,16 +30,16 @@ body {
 }
 
 .card {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     background-color: rgba(0,0,0,.6);
     margin: 20px;
     cursor: pointer;
 }
 
 img{
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
 }
 
 .info {
