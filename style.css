@@ -79,7 +79,7 @@ h2{
 /* Estilos para dispositivos móveis */
 @media only screen and (max-width: 720px) {
     body {
-        padding: 20px; /* Reduz o padding do body */
+        padding: 2px; /* Reduz o padding do body */
     }
 
     #caixa {
@@ -96,14 +96,15 @@ h2{
         height: auto; /* Altura automática */
         margin: 10px; /* Espaçamento entre as cartas */
         display: flex;
-        align-items: center; /* Alinha conteúdo ao centro verticalmente */
-        justify-content: center; /* Alinha conteúdo ao centro horizontalmente */
+        flex-direction: column;
+        align-items: center; /* Centraliza conteúdo verticalmente */
+        justify-content: center; /* Centraliza conteúdo horizontalmente */
+        text-align: center; /* Centraliza texto */
     }
 
     img {
-        max-width: 100%; /* Largura máxima de 100% */
-        max-height: 100%; /* Altura máxima de 100% */
-        object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+        max-width: 100%; /* Limita a largura da imagem ao tamanho do pai */
+        height: auto; /* Altura automática */
     }
 
     .info {
@@ -119,3 +120,4 @@ h2{
         font-size: 16pt; /* Reduz o tamanho da fonte dos títulos */
     }
 }
+
