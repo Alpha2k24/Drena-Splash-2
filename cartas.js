@@ -64,16 +64,17 @@ const members = [
         controlImg: false,
     },
 ];
-
-// Duplicar os membros para criar pares de cartas
 const doubledMembers = [...members, ...members];
 
-// Embaralhar os membros
 const shuffledMembers = doubledMembers.sort(() => Math.random() - 0.5);
 
 let cartasAbertas = [];
 let cartasBloqueadas = [];
 let tentativas = 0;
+
+const resultado = document.createElement('span');
+resultado.innerHTML = `Tentativas: 0`;
+caixa.appendChild(resultado);
 
 const criar = (id, imagem) => {
     const card = document.createElement('div');
@@ -96,30 +97,27 @@ const criar = (id, imagem) => {
             const [carta1, carta2] = cartasAbertas;
 
             if (carta1.id === carta2.id) {
-                // Cartas iguais, bloquear e adicionar div verde opaca
                 cartasBloqueadas.push(carta1.id, carta2.id);
                 carta1.element.classList.add('blocked');
                 carta2.element.classList.add('blocked');
 
                 if (cartasBloqueadas.length === shuffledMembers.length) {
-                    // Todas as cartas estão bloqueadas, mostrar o alerta
                     setTimeout(() => {
                         alert('Parabéns, você conseguiu!');
-                        // Resetar o jogo
                         resetarJogo();
-                    }, 1000); // 1 segundo
+                    }, 1000);
                 }
             } else {
-                // Cartas diferentes, esconder após um tempo
                 setTimeout(() => {
                     carta1.element.setAttribute('src', 'nophotointerroga.jpg');
                     carta2.element.setAttribute('src', 'nophotointerroga.jpg');
                     tentativas++;
+                    resultado.innerHTML = `Tentativas: ${tentativas}`;
                     if (tentativas === 5) {
                         alert('Você perdeu! Tente novamente.');
                         resetarJogo();
                     }
-                }, 1000); // 1 segundo
+                }, 1000);
             }
 
             cartasAbertas = [];
@@ -127,19 +125,14 @@ const criar = (id, imagem) => {
     });
 };
 
-
 const resetarJogo = () => {
-    // Resetar todas as variáveis e imagens
     cartasAbertas = [];
     cartasBloqueadas = [];
     tentativas = 0;
-    caixa.innerHTML = '';
-    
-    // Embaralhar os membros novamente
+    caixa.querySelectorAll('.card').forEach(card => card.remove());
     shuffledMembers.sort(() => Math.random() - 0.5);
     shuffledMembers.forEach((member) => criar(member.id, member.imagem));
+    resultado.innerHTML = `Tentativas: ${tentativas}`;
 };
 
-
-// Criar as cartas para cada imagem embaralhada
 shuffledMembers.forEach((member) => criar(member.id, member.imagem));
