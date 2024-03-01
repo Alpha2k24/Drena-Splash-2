@@ -48,6 +48,20 @@ const members = [
         idade: '18',
         imagem: 'IMG-20240301-WA0074.jpg',
         controlImg: false,
+    },{
+        id: 7,
+        nome: 'Joel',
+        descricao: 'Virgem',
+        idade: '18',
+        imagem: 'IMG-20240301-WA0085.jpg',
+        controlImg: false,
+    },{
+        id: 8,
+        nome:'Ediandra',
+        descricao:'Blogueirinha',
+        idade:'17',
+        imagem:'IMG-20231126-WA0082.jpg',
+        controlImg: false,
     },
 ];
 
