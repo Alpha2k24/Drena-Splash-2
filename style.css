@@ -1,0 +1,105 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: cursive;
+    font-size: 12pt;
+    background: linear-gradient(23deg, blue, red);
+    padding: 50px;
+}
+
+#caixa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100%; /* Define a altura da div caixa */
+    margin-bottom: 50px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0,0,0,.6);
+    margin: 15px;
+    cursor: pointer;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-height: 80vh;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: goldenrod;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+p{
+    font-size: 17pt;
+}
+h2{
+    cursor: pointer;
+}
+#eli {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: goldenrod;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#eli:hover {
+    color: white;
+}
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 20px; /* Reduz o padding do body */
+    }
+
+    .card {
+        width: 150px; /* Reduz a largura dos cards */
+        height: 150px; /* Reduz a altura dos cards */
+        margin: 10px; /* Reduz a margem dos cards */
+    }
+
+    img {
+        width: 150px; /* Reduz o tamanho das imagens */
+        height: 150px; /* Reduz o tamanho das imagens */
+    }
+
+    .info {
+        width: 300px; /* Reduz a largura da caixa de informações */
+        padding: 10px; /* Reduz o padding da caixa de informações */
+    }
+
+    p {
+        font-size: 14pt; /* Reduz o tamanho da fonte dos parágrafos */
+    }
+
+    h2 {
+        font-size: 16pt; /* Reduz o tamanho da fonte dos títulos */
+    }
+}
