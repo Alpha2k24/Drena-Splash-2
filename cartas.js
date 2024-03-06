@@ -88,6 +88,9 @@ const criar = (id, imagem) => {
     caixa.appendChild(card);
 
     card.addEventListener('click', () => {
+        // Verifica se a carta clicada já está aberta
+        if (cartasAbertas.find(carta => carta.id === id)) return;
+
         if (cartasBloqueadas.includes(id) || cartasAbertas.length >= 2) return;
 
         cartasAbertas.push({ id, imagem, element: imagemElement });
