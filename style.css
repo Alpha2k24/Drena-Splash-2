@@ -17,6 +17,7 @@ body {
     background: linear-gradient(23deg, blue, red);
     padding-left: 200px;
     padding-right: 200px;
+    height: 100vh;
 }
 span{
     margin-left: -210px;
