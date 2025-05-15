@@ -12,6 +12,8 @@ body {
     text-align: center;
     font-family: cursive;
     font-size: 12pt;
+    background-size:cover;
+    background-repeat: no-repeat;
     background: linear-gradient(23deg, blue, red);
     padding-left: 200px;
     padding-right: 200px;
